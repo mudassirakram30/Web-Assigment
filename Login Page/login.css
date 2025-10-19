@@ -1,0 +1,106 @@
+div {
+    text-align: center;
+    margin-top: 100px;
+}
+.homelink {
+    text-decoration: none;
+    color: grey;
+}
+.home {
+    margin-left: 200px;
+    padding-top: 20px;
+}
+.logo {
+    justify-content: center;
+    width: 300px;
+    height: 70px;
+    display: inline;
+}
+.Sign {
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.welcome {
+    width: 300px;
+    background-color: #94f3bf;
+    text-align: center;
+    height: 40px;
+    margin-left: 110px;
+    margin-top: -5px;
+}
+.welp {
+    padding-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #42c279;
+    word-spacing: 10px;
+    letter-spacing: 4px;
+}
+.eh {
+    margin-left: -240px;
+    
+}
+.emailin {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+.fp {
+    margin-right: -150px;
+}
+.fp1 {
+    text-decoration: none;
+    color: grey;
+}
+.ph {
+    margin-left: -220px;
+    margin-top: -30px;
+}
+.pinp {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+.loginb {
+    margin-top: 20px;
+    width: 300px;
+    height: 35px;
+    background-color: #42c279;
+    border: #42c279;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    margin-left: 15px;    
+    text-decoration: none;
+}
+.or {
+    text-decoration: underline;
+    color: grey;
+}
+.new {
+    color: grey ;
+    font-family : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    padding-bottom: 20px;
+}
+.text {
+    text-decoration: none;
+    color: #42c279;
+    font-weight: bold;
+}
+.ccp {
+    text-align: center;
+}
+.maindiv {
+    background-color: white;
+    justify-content: center;
+    width: 500px;
+    margin-left: 400px;
+    padding: 16px 16px;
+    box-shadow: 2px 6px 10px black;
+}
+body {
+    background-color: #e9ecef;
+}

@@ -1,0 +1,159 @@
+body {
+    color: #e9ecef;
+}
+.maindiv {
+    background-color: white;
+    width: 700px;
+    box-shadow: 2px 6px 26px black;
+    text-align: center;
+    margin-left: 330px;
+    margin-top: 100px;
+    padding-bottom: 20px;
+}
+.bh1 {
+    text-decoration: none;
+    color: grey;
+}
+.bh {
+    text-align: end;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.logo {
+    justify-content: center;
+    width: 300px;
+    height: 70px;
+    display: inline;
+}
+.ca {
+    color: black;
+    font-size: 22px;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -10px;
+}
+.weldiv {
+    background-color: #94f3bf;
+    width: 300px;
+    margin-left: 200px;
+    height: 35px;
+    border-radius: 10px;
+}
+.weldiv>p {
+    font-weight: bold;
+    color: #42c279;
+    padding-top: 7px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.fl {
+    color: black;
+    font-size: 18px;
+    margin-left: -550px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+#first {
+    width: 300px;
+    height: 40px;
+    margin-left: -340px;
+    margin-top: -10px;
+    border-radius: 10px;
+}
+.f2 {
+    color: black;
+    font-size: 18px;
+    margin-left: 135px;
+    margin-top: -75px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+#last {
+    width: 300px;
+    height: 40px;
+    margin-left: 350px;
+    margin-top: -19px;
+    border-radius: 10px;
+}
+.e1 {
+    color: black;
+    font-size: 18px;
+    margin-left: -595px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.m1 {
+    color: black;
+    font-size: 18px;
+    margin-left: 178px;
+    margin-top: -75px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.pass {
+    color: black;
+    font-size: 18px;
+    margin-left: -568px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+#pass1 {
+    width: 650px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: -30px;
+    border-radius: 10px;
+}
+.note {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+.red {
+    color: red;
+}
+.check {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin-left: -395px;
+    padding-bottom: 20px;
+}
+.Register {
+    margin-top: 20px;
+    width: 650px;
+    height: 40px;
+    background-color: #94f3bf;
+    border-radius: 10px;
+    border: none;
+}
+.hov :hover {
+    background-color: #b5e4ca;
+}
+.r1 {
+    color: #2fa562;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;    
+}
+.or {
+    color: black;
+    font-weight: bold;
+}
+.already {
+    color:grey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+.login {
+    text-decoration: none;
+    color: #2fa562;
+}
+.ccp {
+    color: black;
+    text-align: center;
+    padding-top: 15px;
+}

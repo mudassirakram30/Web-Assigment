@@ -1,0 +1,133 @@
+body {
+    background-color: #e9ecef;
+}
+
+.topnav {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 6px 26px black;
+}
+
+.navbar {
+    padding-top: 1%;
+}
+
+#mainimg1 {
+    width: 15%;
+    border-radius: 8px;
+    padding-top: 1.5%;
+}
+
+.btn {
+    background-color: #F46F22;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 30px;
+}
+
+.btn1 {
+    color: white;
+    text-decoration: none;
+}
+
+.btn2 :hover {
+    background-color: #4A219C;
+    border-radius: 20px;
+}
+
+.header-list {
+    list-style: none;
+    margin: 0;
+    padding-top: -0.5%;
+    display: flex;
+    justify-content: center;
+    margin-top: -1%;
+}
+
+.lis-text {
+    text-decoration: none;
+    padding: 5px;
+    color: black
+}
+
+.list-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    text-align: center;
+    margin-top: -42px;
+    display: flex;
+}
+
+.list-text :hover {
+    background-color: #c9823c;
+    color: white;
+    border-radius: 10px;
+}
+
+.bannerdiv {
+    justify-content: center;
+    display: flex;
+    background-position: center;
+    position: relative;
+    top: 15px;
+}
+.reviewimg1 {
+    width: 300px;
+    height: 300px;
+    margin-left: 40px;
+    margin-top: 50px ;
+    box-shadow: 2px 2px 26px 0px black
+}
+h1 {
+    color: #4A219C;
+    text-align: center;
+    font-size: 40px;
+}
+.footerdiv {
+    background-color: white;
+    height: 233.61px;
+    margin-top: 100px;
+    box-shadow: 0px 2px 25px 0px black;
+}
+.footerL {
+    margin-top: 30px;
+    margin-left: 60px;
+}
+.footerP {
+    margin-left: 60px;
+    margin-top: -10px;
+}
+.links1f {
+    list-style: none;
+    font-size: 17px;
+}
+.ls1h {
+    font-size: 22px;
+    font-weight: bold;
+    color: #f57c00;
+    text-decoration: underline;
+    text-shadow: 2px 2px 25px black;
+}
+.footerlist {
+    margin-left: 580px;
+    margin-top: -150px;
+    line-height: 30px;
+}
+.add1 {
+    list-style: none;
+    font-size: 17px;
+}
+.footerlist2 {
+    margin-left: 980px;
+    margin-top: -175px;
+    line-height: 30px;
+}
+.ccp {
+    text-align: center;
+    margin-top: -7px;
+}
