@@ -1,21 +1,75 @@
-body {
-    background-color: #e9ecef;
+/* ===========================
+   Global Reset & Base
+=========================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    background-color: #e9ecef;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===========================
+   Header / Topnav
+=========================== */
 .topnav {
     background-color: white;
     border-radius: 20px;
-    box-shadow: 2px 6px 26px black;
+    box-shadow: 2px 6px 26px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 14px;
+    position: relative;
 }
 
-.navbar {
-    padding-top: 1%;
-}
-
+/* Logo */
 #mainimg1 {
-    width: 15%;
+    width: 130px;
+    height: auto;
     border-radius: 8px;
-    padding-top: 1.5%;
+}
+
+/* Nav — desktop: centered */
+.navbar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+}
+
+.lis-text {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    padding: 6px 10px;
+    border-radius: 10px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.lis-text:hover {
+    background-color: #c9823c;
+    color: white;
+}
+
+/* Login Button */
+.btn-wrapper {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .btn {
@@ -25,168 +79,315 @@ body {
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
-    position: absolute;
-    right: 25px;
-    top: 30px;
-}
-
-.btn1 {
     color: white;
     text-decoration: none;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+    white-space: nowrap;
 }
 
-.btn2 :hover {
+.btn:hover {
     background-color: #4A219C;
-    border-radius: 20px;
 }
 
-.header-list {
-    list-style: none;
-    margin: 0;
-    padding-top: -0.5%;
-    display: flex;
+/* ===========================
+   Hamburger Button
+=========================== */
+.hamburger {
+    display: none;
+    flex-direction: column;
     justify-content: center;
-    margin-top: -1%;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    flex-shrink: 0;
+    order: -1;
 }
 
-.lis-text {
-    text-decoration: none;
-    padding: 5px;
-    color: black
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
-.list-text {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: x-large;
-    text-align: center;
-    margin-top: -42px;
+/* X animation */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===========================
+   Contact Section
+=========================== */
+.contact-section {
     display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 50px 40px;
+    flex: 1;
+    align-items: flex-start;
 }
 
-.list-text :hover {
-    background-color: #c9823c;
-    color: white;
-    border-radius: 10px;
-}
-
-.bannerdiv {
-    justify-content: center;
-    display: flex;
-    background-position: center;
-    position: relative;
-    top: 15px;
-}
+/* Talk Box */
 .talkbox {
     background-color: #F46F22;
     color: white;
     width: 310px;
-    height: 300px;
+    min-height: 300px;
     border-radius: 10px;
-    margin-left: 50px;
-    margin-top: 50px;
+    padding: 30px 30px 30px 40px;
+    flex-shrink: 0;
 }
-.talkp {
-    padding-top: 50px;
-    margin-left: 40px;
-}
+
 .talkh {
-    font-size: 22px;
+    font-size: 1.35rem;
     font-weight: bold;
+    line-height: 1.5;
 }
+
+.talkp {
+    line-height: 1.8;
+}
+
 .icon {
-    font-size: 35px;
+    font-size: 2rem;
 }
+
 .icon2 {
-    font-size: 22px;
+    font-size: 1.2rem;
+    vertical-align: middle;
 }
-.contact {
-    margin-left: 25px;
-    font-size: 18px;
+
+.contact-info {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1rem;
 }
+
+.contact-info a {
+    color: white;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.contact-info a:hover {
+    color: #ffe0c0;
+}
+
+/* Social Box */
 .social {
-    width: 900px;
-    height: 300px;
+    flex: 1;
+    min-width: 280px;
     background-color: white;
-    margin-left: 400px;
-    margin-top: -300px;
     border-radius: 10px;
-}
-.wa {
-    margin-top: 60px;
-    margin-left: 40px;
-}
-.email {
-    margin-left: 40px;
-}
-.yt {
-    margin-top: 60px;
-    margin-left: 40px;
-}
-
-.fb {
-    margin-top: 60px;
-    margin-left: 40px;
-}
-.insta {
-    margin-top: 60px;
-    margin-left: 40px;
-}
-.tk {
-    margin-top: 60px;
-    margin-left: 40px;
-}
-.social>ul>li {
-    list-style: none;
-    padding-left: 78px;
-    font-size: 18px;
-    font-weight: bold;
-}
-.social>ul {
+    padding: 30px 20px;
     display: flex;
-    margin-left: -69px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 80px;
+}
 
+.social-item img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.social-item img:hover {
+    transform: scale(1.1);
+}
+
+.social-item span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+/* ===========================
+   Footer
+=========================== */
 .footerdiv {
     background-color: white;
-    height: 233.61px;
-    margin-top: 100px;
-    box-shadow: 0px 2px 25px 0px black;
+    box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.5);
+    padding: 30px 40px 16px;
+    margin-top: auto;
 }
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-brand {
+    flex: 1 1 250px;
+    max-width: 320px;
+}
+
 .footerL {
-    margin-top: 30px;
-    margin-left: 60px;
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
 }
+
 .footerP {
-    margin-left: 60px;
-    margin-top: -10px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #333;
 }
-.links1f {
-    list-style: none;
-    font-size: 17px;
+
+.footer-col {
+    flex: 1 1 160px;
 }
+
 .ls1h {
-    font-size: 22px;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #f57c00;
     text-decoration: underline;
-    text-shadow: 2px 2px 25px black;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin-bottom: 8px;
 }
-.footerlist {
-    margin-left: 580px;
-    margin-top: -150px;
-    line-height: 30px;
-}
-.add1 {
+
+.footer-list {
     list-style: none;
-    font-size: 17px;
+    font-size: 0.95rem;
+    line-height: 2;
+    color: #333;
 }
-.footerlist2 {
-    margin-left: 980px;
-    margin-top: -175px;
-    line-height: 30px;
+
+.footerdiv hr {
+    margin-top: 20px;
+    border: none;
+    border-top: 1px solid #ddd;
 }
+
 .ccp {
     text-align: center;
-    margin-top: -7px;
+    font-size: 0.85rem;
+    color: #555;
+    padding: 10px 0 4px;
+}
+
+/* ===========================
+   Responsive — Tablet & Mobile
+=========================== */
+@media (max-width: 768px) {
+    .topnav {
+        flex-wrap: wrap;
+        padding: 12px 16px;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    #mainimg1 {
+        width: 110px;
+    }
+
+    /* Login button far right */
+    .btn-wrapper {
+        margin-left: auto;
+    }
+
+    /* Nav hidden by default */
+    .navbar {
+        display: none;
+        width: 100%;
+        order: 4;
+    }
+
+    .navbar.open {
+        display: flex;
+    }
+
+    .header-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 8px 0;
+        width: 100%;
+    }
+
+    .lis-text {
+        font-size: 1.1rem;
+        display: block;
+        width: 100%;
+        padding: 8px 12px;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .talkbox {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .social {
+        width: 100%;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #mainimg1 {
+        width: 90px;
+    }
+
+    .talkbox {
+        padding: 24px 20px;
+        min-height: auto;
+    }
+
+    .social-item {
+        width: 65px;
+    }
+
+    .social-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footerdiv {
+        padding: 24px 20px 12px;
+    }
 }
