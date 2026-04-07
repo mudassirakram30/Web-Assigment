@@ -82,7 +82,7 @@ async function loginWithEmail(email, password) {
     const result = await signInWithEmailAndPassword(auth, email, password);
     await updateLastLogin(result.user.uid);
 
-    showMessage("Login successful! Welcome back 👋", "success");
+    showMessage("Login successful! Welcome back ", "success");
     setTimeout(() => window.location.href = "../index.html", 1500);
 
   } catch (err) {
@@ -101,7 +101,7 @@ async function loginWithGoogle() {
     await saveUserToFirestore(user, { provider: "google" });
     await updateLastLogin(user.uid);
 
-    showMessage("Google se login ho gaya! 🎉", "success");
+    showMessage("Account created successfully! You can now log in. ", "success");
     setTimeout(() => window.location.href = "../index.html", 1500);
 
   } catch (err) {
@@ -136,17 +136,17 @@ function checkAuthState(callbackLoggedIn, callbackLoggedOut) {
 // ============================================================
 function firebaseError(code) {
   const errors = {
-    "auth/email-already-in-use":    "Yeh email pehle se register hai.",
-    "auth/invalid-email":           "Email format galat hai.",
-    "auth/weak-password":           "Password kam az kam 6 characters ka hona chahiye.",
-    "auth/user-not-found":          "Yeh email registered nahi hai.",
-    "auth/wrong-password":          "Password galat hai.",
-    "auth/invalid-credential":      "Email ya password galat hai.",
-    "auth/popup-closed-by-user":    "Google popup band ho gaya, dobara try karo.",
+    "auth/email-already-in-use":    "This email is already registered. Please log in or use a different email.",
+    "auth/invalid-email":           "Invalid email format. Please enter a valid email address.",
+    "auth/weak-password":           "Password must be at least 6 characters long.",
+    "auth/user-not-found":          "This email is not registered. Please sign up first.",
+    "auth/wrong-password":          "Incorrect password. Please try again.",
+    "auth/invalid-credential":      "Invalid email or password.",
+    "auth/popup-closed-by-user":    "Google popup was closed. Please try again.",
     "auth/network-request-failed":  "Internet connection check karo.",
     "auth/too-many-requests":       "Bahut zyada attempts. Thodi der baad try karo.",
   };
-  return errors[code] || "Kuch masla aa gaya, dobara try karo.";
+  return errors[code] || "Sign-up failed! Please check your details or try again.";
 }
 
 // ============================================================
