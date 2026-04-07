@@ -20,7 +20,7 @@
             <div class="form-group">
                 <label class="form-label">First Name</label>
                 <!-- ✅ ID added: signupFirstName -->
-                <input type="text" class="form-input" placeholder="First Name" id="signupFirstName">
+                <input type="text" class="form-input" placeholder="First Name" id="signupFirstName" >
             </div>
             <div class="form-group">
                 <label class="form-label">Last Name</label>
@@ -109,6 +109,13 @@
         const fullName = `${firstName} ${lastName}`;
         await signupWithEmail(fullName, email, password);
     });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("aZAYbJc4HaaKa9kaR");
+})();
 </script>
 
 </body>

@@ -33,3 +33,19 @@ checkbox.addEventListener("change", function() {
         pass.type = "password";
     }
 });
+//  Email Js Conceept
+
+const firstName = document.getElementById("signupFirstName").value;
+const lastName = document.getElementById("signupLastName").value;
+let name = firstName + " " + lastName;
+const signupBtn = document.querySelector(".signupBtn");
+
+signupBtn.addEventListener("click", () => {
+
+  let name = nameInput.value;
+  let email = emailInput.value;
+
+  sendEmails(name, email);
+
+});
+
