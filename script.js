@@ -36,7 +36,7 @@ checkbox.addEventListener("change", function() {
 //  Email Js Conceept
 
 (function(){
-  emailjs.init("YOUR_PUBLIC_KEY"); // 👈 yahan apni public key daalo
+  emailjs.init("aZAYbJc4HaaKa9kaR"); 
 })();
 
 const signupBtn = document.getElementById("signupBtn");
