@@ -19,28 +19,33 @@
         <div class="form-row">
             <div class="form-group">
                 <label class="form-label">First Name</label>
-                <input type="text" class="form-input" placeholder="First Name">
+                <!-- ✅ ID added: signupFirstName -->
+                <input type="text" class="form-input" placeholder="First Name" id="signupFirstName">
             </div>
             <div class="form-group">
                 <label class="form-label">Last Name</label>
-                <input type="text" class="form-input" placeholder="Last Name">
+                <!-- ✅ ID added: signupLastName -->
+                <input type="text" class="form-input" placeholder="Last Name" id="signupLastName">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-input" placeholder="Your Email">
+                <!-- ✅ ID added: signupEmail -->
+                <input type="email" class="form-input" placeholder="Your Email" id="signupEmail">
             </div>
             <div class="form-group">
                 <label class="form-label">Mobile Number</label>
-                <input type="tel" class="form-input" placeholder="Phone Number">
+                <!-- ✅ ID added: signupPhone -->
+                <input type="tel" class="form-input" placeholder="Phone Number" id="signupPhone">
             </div>
         </div>
 
         <div class="form-group full">
             <label class="form-label">Password</label>
-            <input type="password" class="form-input" maxlength="8" placeholder="Create a Password">
+            <!-- ✅ ID added: signupPass -->
+            <input type="password" class="form-input" maxlength="8" placeholder="Create a Password" id="signupPass">
         </div>
 
         <div class="refund-notice">
@@ -49,15 +54,18 @@
         </div>
 
         <label class="agree-row">
+            <!-- ✅ ID already existed: agree -->
             <input type="checkbox" id="agree">
             <span>I agree with the <span class="red">NO REFUND POLICY</span></span>
         </label>
 
         <div class="form-group full">
-            <input type="text" class="form-input" placeholder='Type "I agree" to confirm'>
+            <!-- ✅ ID added: agreeText -->
+            <input type="text" class="form-input" placeholder='Type "I agree" to confirm' id="agreeText">
         </div>
 
-        <button class="auth-btn" onclick="window.location='../Login Page/login.html'">Register →</button>
+        <!-- ✅ ID added: signupBtn (onclick removed, handled in JS) -->
+        <button class="auth-btn" id="signupBtn">Register →</button>
 
         <p class="auth-divider">OR</p>
         <p class="auth-switch">Already have an account?
@@ -67,6 +75,41 @@
 </div>
 
 <p class="ccp" style="padding:16px 0">© 2025 Trade Empire. All Rights Reserved.</p>
+
+<!-- ✅ Firebase functions import (type="module" zaroori hai) -->
+<script type="module">
+    import { signupWithEmail } from "../firebase.js";
+
+    document.getElementById('signupBtn').addEventListener('click', async () => {
+        const firstName = document.getElementById('signupFirstName').value.trim();
+        const lastName  = document.getElementById('signupLastName').value.trim();
+        const email     = document.getElementById('signupEmail').value.trim();
+        const phone     = document.getElementById('signupPhone').value.trim();
+        const password  = document.getElementById('signupPass').value.trim();
+        const agreed    = document.getElementById('agree').checked;
+        const agreeText = document.getElementById('agreeText').value.trim().toLowerCase();
+
+        // ── Validation ──────────────────────────────────────────
+        if (!firstName || !lastName || !email || !phone || !password) {
+            alert("Tamam fields bharna zaroori hain.");
+            return;
+        }
+
+        if (!agreed || agreeText !== "i agree") {
+            alert('Pehle "I agree" checkbox tick karo aur text field mein "I agree" likho.');
+            return;
+        }
+
+        if (password.length < 6) {
+            alert("Password kam az kam 6 characters ka hona chahiye.");
+            return;
+        }
+        // ────────────────────────────────────────────────────────
+
+        const fullName = `${firstName} ${lastName}`;
+        await signupWithEmail(fullName, email, password);
+    });
+</script>
 
 </body>
 </html>
