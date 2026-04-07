@@ -3,37 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singup</title>
+    <title>Sign Up — Trade Empire</title>
+    <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="./singup.css">
 </head>
 <body>
-<div class="maindiv">
-    <p class="bh"><a href="../index.html" class="bh1">Back to Home</a></p>
-    <img src="../All images/header-img (1).png" alt="Logo" class="logo">
-    <p class="ca">Create an Account</p>
-    <div class="weldiv">
-        <P>Welcome to Trade Empire!</P>
+
+<div class="auth-page">
+    <div class="auth-card">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+        <img src="../All images/header-img (1).png" alt="Trade Empire Logo" class="auth-logo">
+        <h1 class="display-title auth-title">Create Account</h1>
+        <div class="auth-welcome"><span>Welcome to Trade Empire! 🚀</span></div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-input" placeholder="First Name">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-input" placeholder="Last Name">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-input" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Mobile Number</label>
+                <input type="tel" class="form-input" placeholder="Phone Number">
+            </div>
+        </div>
+
+        <div class="form-group full">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-input" maxlength="8" placeholder="Create a Password">
+        </div>
+
+        <div class="refund-notice">
+            <span class="refund-icon">❗</span>
+            <p><strong>NOTE:</strong> Due to the nature of the service and business, there is a <span class="red">STRICT NO REFUND POLICY.</span></p>
+        </div>
+
+        <label class="agree-row">
+            <input type="checkbox" id="agree">
+            <span>I agree with the <span class="red">NO REFUND POLICY</span></span>
+        </label>
+
+        <div class="form-group full">
+            <input type="text" class="form-input" placeholder='Type "I agree" to confirm'>
+        </div>
+
+        <button class="auth-btn" onclick="window.location='../Login Page/login.html'">Register →</button>
+
+        <p class="auth-divider">OR</p>
+        <p class="auth-switch">Already have an account?
+            <a href="../Login Page/login.html" class="auth-link">Login Here</a>
+        </p>
     </div>
-    <form action=""><p class="fl">First Name</p>
-    <input type="text" id="first" placeholder="Enter your First Name">
-    <p class="f2">Last Name</p>
-    <input type="text" id="last" placeholder="Enter your Last Name">
-    <p class="e1">Email</p>
-    <input type="email" id="first" placeholder="Enter your Email">
-    <p class="m1">Mobile Number</p>
-    <input type="number" id="last" placeholder="Enter your Number">
-    <p class="pass">Password</p>
-    <input type="password" maxlength="8" id="pass1" placeholder="Enter Your Password">
-    <p class="note">❗NOTE Due to the nature of the service and business, there is a 
-        <span class="red">STRICT NO REFUND POLICY.*</span> <br>
-    <p class="check"><input type="checkbox" id="agree" >I agree with <span class="red">NO REFUND POLICY</span></p>
-    <input type="password" maxlength="8" id="pass1" placeholder="Type here (I agree)">
-    <div class="hov"><button class="Register"><a href="../Login Page/login.html" class="r1"> Register → </button></a></div>
-    <p class="or">OR</p>
-    <p class="already">Already have an Account? <a href="../Login Page/login.html" class="login">Login Here </a></p>
-    </form>
 </div>
-<p class="ccp">© 2025 Trade Empire. All Rights Reserved.</p> 
+
+<p class="ccp" style="padding:16px 0">© 2025 Trade Empire. All Rights Reserved.</p>
 
 </body>
 </html>

@@ -3,199 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRADE EMPIRE</title>
+    <title>Trade Empire — Pakistan's No.1 Trading Platform</title>
+    <link rel="stylesheet" href="./shared.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-<!-- Header -->
+<!-- ===== HEADER ===== -->
 <header class="topnav">
-    <img id="mainimg1" src="./All images/header-img (1).png" class="logo" alt="Logo">
+    <img src="./All images/header-img (1).png" class="nav-logo" alt="Trade Empire Logo">
     <nav class="navbar">
         <ul class="header-list">
-            <li><a href="./index.html" class="lis-text">Home</a></li>
-            <li><a href="./Course Page/Courses.html" class="lis-text">Courses</a></li>
-            <li><a href="./Review Page/review.html" class="lis-text">Reviews</a></li>
-            <li><a href="./Contact Page/Contact.html" class="lis-text">Contact</a></li>
+            <li><a href="./index.html" class="active">Home</a></li>
+            <li><a href="./Course Page/Courses.html">Courses</a></li>
+            <li><a href="./Review Page/review.html">Reviews</a></li>
+            <li><a href="./Contact Page/Contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="header-btn">
-        <button class="btn"><a href="./Login Page/login.html" class="btn1">Login / Signup</a></button>
-    </div>
-    <!-- Hamburger -->
+    <a href="./Login Page/login.html" class="nav-cta">Login / Signup</a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
     </button>
 </header>
 
-<!-- Banner -->
-<div class="bannerdiv">
-    <img src="./All images/new course main img.png" alt="Banner" id="bannerimg1">
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="./index.html">🏠 Home</a>
+    <a href="./Course Page/Courses.html">📚 Courses</a>
+    <a href="./Review Page/review.html">⭐ Reviews</a>
+    <a href="./Contact Page/Contact.html">📞 Contact</a>
+    <a href="./Login Page/login.html" class="mobile-cta">Login / Signup</a>
 </div>
 
-<!-- Hero Section -->
+<!-- ===== BANNER ===== -->
+<div class="bannerdiv">
+    <img src="./All images/new course main img.png" alt="Trade Empire Banner" id="bannerimg1">
+</div>
+
+<!-- ===== HERO ===== -->
 <section class="herosection">
     <div class="hero-text">
-        <h2 id="wel">Welcome to Trade Empire</h2>
-        <h1 id="No1">Pakistan No.1 Online <br> Learning Platform</h1>
-        <p class="herosecp">Learn Smart Money concepts, ICT concepts, and modern trading psychology. <br>
-            Trade Empire is your gateway to success in the Trading World — unlock your future today!</p>
-        <button class="get"><a href="./Login Page/login.html" class="btn2">Get Started →</a></button>
+        <p class="section-label">Welcome to Trade Empire</p>
+        <h1 class="display-title hero-headline">Pakistan's No.1<br>Online Learning<br>Platform</h1>
+        <p class="hero-desc">Learn Smart Money concepts, ICT concepts, and modern trading psychology. Trade Empire is your gateway to success in the Trading World — unlock your future today!</p>
+        <a href="./Login Page/login.html" class="hero-btn">Get Started →</a>
     </div>
     <div class="hero-img">
-        <img src="./All images/herosection img.png" alt="Hero" class="herosecimg"
+        <img src="./All images/herosection img.png" alt="Hero"
             onmouseover="changeImage()" onmouseout="beforeImg()" id="hoverimage">
     </div>
 </section>
 
-<!-- Stats -->
-<div class="Listall">
+<!-- ===== STATS ===== -->
+<div class="stats-grid">
     <div class="stat-card">
+        <img src="./All images/students.png" alt="Students" class="stat-icon">
         <div>
-            <span class="sk">10k+</span><br>
-            <span class="PF">PROFITABLE<br>STUDENTS</span>
+            <span class="stat-num">10k+</span>
+            <span class="stat-label">Profitable Students</span>
         </div>
-        <img src="./All images/students.png" alt="students" class="statimg">
-    </div>
-    <div class="stat-card">
-        <div>
-            <span class="sk">50Lakh+</span><br>
-            <span class="PF">COMMUNITY<br>EARNING</span>
-        </div>
-        <img src="./All images/Earning.png" alt="earning" class="statimg">
     </div>
     <div class="stat-card">
+        <img src="./All images/Earning.png" alt="Earning" class="stat-icon">
         <div>
-            <span class="sk">Daily</span><br>
-            <span class="PF">LIVE<br>TRAINING</span>
+            <span class="stat-num">50L+</span>
+            <span class="stat-label">Community Earning</span>
         </div>
-        <img src="./All images/Live Training.png" alt="live training" class="statimg">
     </div>
     <div class="stat-card">
+        <img src="./All images/Live Training.png" alt="Live" class="stat-icon">
         <div>
-            <span class="sk">5k+</span><br>
-            <span class="PF">MONTHLY<br>LEARNERS</span>
-        </div>
-        <img src="./All images/Learning.png" alt="learners" class="statimg">
-    </div>
-</div>
-
-<!-- How It Works -->
-<p class="dk">Do you want to know?</p>
-<h1 class="hw">How Trade Empire Works?</h1>
-<div class="afterlist">
-    <div class="work-card">
-        <img src="./All images/students.png" alt="Learn" class="learnImg">
-        <p class="learnP"><span class="ln">Learn</span><br>
-            Learn from trainers who have real-time expertise in their respective fields.</p>
-    </div>
-    <div class="work-card">
-        <img src="./All images/Learning.png" alt="Implement" class="learnImg">
-        <p class="learnP"><span class="ln">Implement</span><br>
-            Implement these trending skills of the future and grow with the trading world.</p>
-    </div>
-    <div class="work-card">
-        <img src="./All images/Earning.png" alt="Earn" class="learnImg">
-        <p class="learnP"><span class="ln">Earn</span><br>
-            This helps you stand out from the crowd. Earn more money than competitors in the market.</p>
-    </div>
-</div>
-
-<!-- Mentors -->
-<h1 class="MM">Meet Our Mentors</h1>
-<p class="mentorp">Learn ICT & Smart Money Concepts from our expert mentors and master the art of trading with real market strategies.</p>
-
-<div class="mentors-section">
-    <div class="mentor-item">
-        <img src="./All images/Mudassir Profile.png" alt="Mudassir" class="MP">
-        <div class="mudab">
-            <p><span class="boldit">About Me:<br>Hi! I'm Mudassir Shaikh,</span><br>
-                a 17-year-old from Pakistan. I completed my Matriculation from Educator School and am currently studying Intermediate at DJ Science College. I hold CIT and DIT certifications and have completed a Digital Marketing course. I also have hands-on experience in e-commerce and worked as a Computer Operator, which improved my technical and management skills. With a 50 WPM typing speed and basic trading experience, I bring a mix of technical knowledge, business understanding, and dedication to every task I take on.</p>
+            <span class="stat-num">Daily</span>
+            <span class="stat-label">Live Training</span>
         </div>
     </div>
-    <div class="mentor-item">
-        <img src="./All images/Ahmed Profile.png" alt="Ahmed" class="MP">
-        <div class="mudab">
-            <p><span class="boldit">About Ahmed:<br>Hi! I'm Ahmed Qureshi,</span><br>
-                I'm a passionate Graphic Designer with a creative eye for design and detail. I also have 6 months of experience in Digital Marketing, where I learned how to connect creativity with strategy. Currently, I'm learning Front-End Development and working towards becoming a Full-Stack Developer to combine design and development skills. Alongside my tech journey, I've also developed my expertise in trading, and I'm now earning full-time through trading. I'm constantly learning and improving myself to grow both professionally and personally.</p>
+    <div class="stat-card">
+        <img src="./All images/Learning.png" alt="Learners" class="stat-icon">
+        <div>
+            <span class="stat-num">5k+</span>
+            <span class="stat-label">Monthly Learners</span>
         </div>
     </div>
 </div>
 
-<!-- Middle Marketing Image -->
-<div class="middleimg-wrapper">
-    <img src="./All images/middle img.png" alt="image" class="middleimg">
-</div>
-
-<!-- FAQ -->
-<div class="fandq">
-    <div class="que">
-        <div class="item">
-            <h2>What is Trade Empire? <img class="arrow" src="./All images/arrow image.png" alt="arrow"></h2>
-            <h3 class="itemh3">Trade Empire is an online platform for learning modern trading skills. It focuses on Smart Money Concepts (SMC) and ICT trading strategies.</h3>
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how-section">
+    <p class="section-label" style="text-align:center">Do you want to know?</p>
+    <h2 class="display-title section-title">How Trade Empire Works?</h2>
+    <div class="how-grid">
+        <div class="how-card">
+            <img src="./All images/students.png" alt="Learn" class="how-icon">
+            <h3 class="how-card-title">Learn</h3>
+            <p class="how-card-text">Learn from trainers who have real-time expertise in their respective fields.</p>
         </div>
-        <div class="item">
-            <h2>Who can join Trade Empire? <img class="arrow" src="./All images/arrow image.png" alt="arrow"></h2>
-            <h3 class="itemh3">Anyone interested in learning modern trading skills can join Trade Empire.</h3>
+        <div class="how-card">
+            <img src="./All images/Learning.png" alt="Implement" class="how-icon">
+            <h3 class="how-card-title">Implement</h3>
+            <p class="how-card-text">Implement these trending skills of the future and grow with the trading world.</p>
         </div>
-        <div class="item">
-            <h2>What will I learn from Trade Empire? <img class="arrow" src="./All images/arrow image.png" alt="arrow"></h2>
-            <h3 class="itemh3">You will learn professional trading concepts used in real markets. The goal is to help you learn, implement, and grow confidently.</h3>
-        </div>
-        <div class="item">
-            <h2>Is Trade Empire suitable for beginners? <img class="arrow" src="./All images/arrow image.png" alt="arrow"></h2>
-            <h3 class="itemh3">Yes, Trade Empire is designed to be beginner-friendly and provides a structured learning path for all levels of traders.</h3>
+        <div class="how-card">
+            <img src="./All images/Earning.png" alt="Earn" class="how-icon">
+            <h3 class="how-card-title">Earn</h3>
+            <p class="how-card-text">Stand out from the crowd and earn more than competitors in the market.</p>
         </div>
     </div>
+</section>
+
+<!-- ===== MENTORS ===== -->
+<section class="mentors-section">
+    <h2 class="display-title section-title">Meet Our Mentors</h2>
+    <p class="section-sub">Learn ICT &amp; Smart Money Concepts from our expert mentors and master the art of trading with real market strategies.</p>
+    <div class="mentors-grid">
+        <div class="mentor-card">
+            <img src="./All images/Mudassir Profile.png" alt="Mudassir" class="mentor-img">
+            <div class="mentor-body">
+                <h3 class="mentor-name">Mudassir Shaikh</h3>
+                <p class="mentor-bio">A 17-year-old from Pakistan with CIT and DIT certifications, Digital Marketing training, and hands-on e-commerce experience. With a 50 WPM typing speed and practical trading knowledge, Mudassir brings technical skill and dedication to every task.</p>
+            </div>
+        </div>
+        <div class="mentor-card">
+            <img src="./All images/Ahmed Profile.png" alt="Ahmed" class="mentor-img">
+            <div class="mentor-body">
+                <h3 class="mentor-name">Ahmed Qureshi</h3>
+                <p class="mentor-bio">A passionate Graphic Designer with 6 months of Digital Marketing experience and growing expertise in Front-End Development. Ahmed is currently earning full-time through trading while expanding his skills in full-stack development.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MIDDLE IMAGE ===== -->
+<div class="mid-banner">
+    <img src="./All images/middle img.png" alt="Trade Empire Promotion" class="mid-banner-img">
 </div>
 
-<!-- Footer -->
+<!-- ===== FAQ ===== -->
+<section class="faq-section">
+    <h2 class="display-title section-title" style="text-align:center">Frequently Asked Questions</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-q">
+                <span>What is Trade Empire?</span>
+                <span class="faq-arrow">↓</span>
+            </button>
+            <div class="faq-a">Trade Empire is an online platform for learning modern trading skills, focusing on Smart Money Concepts (SMC) and ICT trading strategies.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-q">
+                <span>Who can join Trade Empire?</span>
+                <span class="faq-arrow">↓</span>
+            </button>
+            <div class="faq-a">Anyone interested in learning modern trading skills can join Trade Empire — beginners and advanced traders alike.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-q">
+                <span>What will I learn from Trade Empire?</span>
+                <span class="faq-arrow">↓</span>
+            </button>
+            <div class="faq-a">You will learn professional trading concepts used in real markets. The goal is to help you learn, implement, and grow confidently.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-q">
+                <span>Is Trade Empire suitable for beginners?</span>
+                <span class="faq-arrow">↓</span>
+            </button>
+            <div class="faq-a">Yes! Trade Empire is designed to be beginner-friendly with a structured learning path for all levels of traders.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
 <footer class="footerdiv">
     <div class="footer-inner">
         <div class="footer-brand">
-            <img src="./All images/Footerl Logo.png" alt="Logo" class="footerL">
-            <p class="footerP">Trade Empire brings the learner community of all age groups under one roof to learn, implement,
-                and grow with the Trading Skills of the future, that help you stand out from the crowd.</p>
+            <img src="./All images/Footerl Logo.png" alt="Trade Empire" class="footerL">
+            <p class="footerP">Trade Empire brings the learner community of all age groups under one roof to learn, implement, and grow with the Trading Skills of the future — helping you stand out from the crowd.</p>
         </div>
-        <div class="footer-links">
-            <ul class="links1f">
-                <span class="ls1h">Quick Links</span>
+        <div>
+            <span class="footer-heading">Quick Links</span>
+            <ul class="footer-list">
                 <li>Disclaimer</li>
                 <li>Privacy Policy</li>
                 <li>Refund Policy</li>
-                <li>Terms & Conditions</li>
+                <li>Terms &amp; Conditions</li>
             </ul>
         </div>
-        <div class="footer-address">
-            <ul class="add1">
-                <span class="ls1h">Address</span>
-                <li>&#128205; Karachi, Sindh, Pakistan</li>
-                <li>&#9993; mudassirakram30@gmail.com</li>
-                <li>&#9990; +92 316 3041828</li>
+        <div>
+            <span class="footer-heading">Address</span>
+            <ul class="footer-list">
+                <li>📍 Karachi, Sindh, Pakistan</li>
+                <li>✉ mudassirakram30@gmail.com</li>
+                <li>📞 +92 316 3041828</li>
             </ul>
         </div>
     </div>
-    <hr>
+    <hr class="footer-divider">
     <p class="ccp">© 2025 Trade Empire. All Rights Reserved.</p>
 </footer>
 
 <script src="script.js"></script>
 <script>
-    // Hamburger menu
     const hamburger = document.getElementById('hamburger');
-    const navbar = document.querySelector('.navbar');
+    const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => {
-        navbar.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
         hamburger.classList.toggle('active');
     });
-
-    // FAQ accordion
-    document.querySelectorAll('.item h2').forEach(h2 => {
-        h2.addEventListener('click', () => {
-            const h3 = h2.nextElementSibling;
-            const isOpen = h3.style.display === 'block';
-            document.querySelectorAll('.itemh3').forEach(el => el.style.display = 'none');
-            h3.style.display = isOpen ? 'none' : 'block';
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
         });
     });
 </script>

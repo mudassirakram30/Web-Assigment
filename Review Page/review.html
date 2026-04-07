@@ -3,88 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews</title>
+    <title>Reviews — Trade Empire</title>
+    <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="./review.css">
 </head>
 <body>
 
-    <!-- Top Header -->
-    <header class="topnav">
-        <!-- Hamburger Button -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+<!-- ===== HEADER ===== -->
+<header class="topnav">
+    <img src="../All images/header-img (1).png" class="nav-logo" alt="Trade Empire Logo">
+    <nav class="navbar">
+        <ul class="header-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Course Page/Courses.html">Courses</a></li>
+            <li><a href="../Review Page/review.html" class="active">Reviews</a></li>
+            <li><a href="../Contact Page/Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <a href="../Login Page/login.html" class="nav-cta">Login / Signup</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
 
-        <!-- Logo -->
-        <img id="mainimg1" src="../All images/header-img (1).png" class="logo" alt="Logo">
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="../index.html">🏠 Home</a>
+    <a href="../Course Page/Courses.html">📚 Courses</a>
+    <a href="../Review Page/review.html">⭐ Reviews</a>
+    <a href="../Contact Page/Contact.html">📞 Contact</a>
+    <a href="../Login Page/login.html" class="mobile-cta">Login / Signup</a>
+</div>
 
-        <!-- Nav Links -->
-        <nav class="navbar" id="navbar">
-            <ul class="header-list">
-                <li><a href="../index.html" class="lis-text">Home</a></li>
-                <li><a href="../Course Page/Courses.html" class="lis-text">Courses</a></li>
-                <li><a href="../Review Page/review.html" class="lis-text">Reviews</a></li>
-                <li><a href="../Contact Page/Contact.html" class="lis-text">Contact</a></li>
+<!-- ===== MAIN ===== -->
+<main class="reviews-main">
+    <p class="section-label" style="text-align:center">What People Say</p>
+    <h1 class="display-title page-title">Student Reviews</h1>
+    <img src="../All images/Reviews.png" alt="Reviews" class="reviewimg1">
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footerdiv">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="../All images/Footerl Logo.png" alt="Trade Empire" class="footerL">
+            <p class="footerP">Trade Empire brings the learner community of all age groups under one roof to learn, implement, and grow with the Trading Skills of the future — helping you stand out from the crowd.</p>
+        </div>
+        <div>
+            <span class="footer-heading">Quick Links</span>
+            <ul class="footer-list">
+                <li>Disclaimer</li>
+                <li>Privacy Policy</li>
+                <li>Refund Policy</li>
+                <li>Terms &amp; Conditions</li>
             </ul>
-        </nav>
-
-        <!-- Login Button -->
-        <div class="btn-wrapper">
-            <a href="../Login Page/login.html" class="btn">Login / Signup</a>
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main-content">
-        <h1>Reviews!</h1>
-        <img src="../All images/Reviews.png" alt="Review" class="reviewimg1">
-    </main>
-
-    <!-- Footer -->
-    <footer class="footerdiv">
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <img src="../All images/Footerl Logo.png" alt="Logo" class="footerL">
-                <p class="footerP">
-                    Trade Empire brings the learner community of all age
-                    groups under one roof to learn, implement, and grow
-                    with the trading skills of the future, that help you
-                    stand out from the crowd.
-                </p>
-            </div>
-            <div class="footer-col">
-                <span class="ls1h">Quick Links</span>
-                <ul class="footer-list">
-                    <li>Disclaimer</li>
-                    <li>Privacy Policy</li>
-                    <li>Refund Policy</li>
-                    <li>Terms and Conditions</li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <span class="ls1h">Address</span>
-                <ul class="footer-list">
-                    <li>𖡡 Karachi, Sindh, Pakistan</li>
-                    <li>✉ mudassirakram30@gmail.com</li>
-                    <li>✆ +92 316 3041828</li>
-                </ul>
-            </div>
+        <div>
+            <span class="footer-heading">Address</span>
+            <ul class="footer-list">
+                <li>📍 Karachi, Sindh, Pakistan</li>
+                <li>✉ mudassirakram30@gmail.com</li>
+                <li>📞 +92 316 3041828</li>
+            </ul>
         </div>
-        <hr>
-        <p class="ccp">© 2025 Trade Empire. All Rights Reserved.</p>
-    </footer>
+    </div>
+    <hr class="footer-divider">
+    <p class="ccp">© 2025 Trade Empire. All Rights Reserved.</p>
+</footer>
 
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navbar = document.getElementById('navbar');
-
-        hamburger.addEventListener('click', () => {
-            navbar.classList.toggle('open');
-            hamburger.classList.toggle('active');
-        });
-    </script>
-
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+        hamburger.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
