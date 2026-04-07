@@ -66,7 +66,7 @@ async function signupWithEmail(name, email, password) {
 
     await saveUserToFirestore(user, { name, provider: "email" });
 
-    showMessage("Account ban gaya! Welcome to Trade Empire 🎉", "success");
+    showMessage("Account created successfully! Welcome to Trade Empire", "success");
     setTimeout(() => window.location.href = "../index.html", 1500);
 
   } catch (err) {
@@ -143,8 +143,8 @@ function firebaseError(code) {
     "auth/wrong-password":          "Incorrect password. Please try again.",
     "auth/invalid-credential":      "Invalid email or password.",
     "auth/popup-closed-by-user":    "Google popup was closed. Please try again.",
-    "auth/network-request-failed":  "Internet connection check karo.",
-    "auth/too-many-requests":       "Bahut zyada attempts. Thodi der baad try karo.",
+    "auth/network-request-failed":  "No internet connection. Please check your network and try again.",
+    "auth/too-many-requests":       "Too many attempts. Please try again later.",
   };
   return errors[code] || "Sign-up failed! Please check your details or try again.";
 }
