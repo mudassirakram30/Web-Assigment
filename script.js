@@ -35,46 +35,40 @@ checkbox.addEventListener("change", function() {
 });
 //  Email Js Conceept
 
-(function(){
-  emailjs.init("aZAYbJc4HaaKa9kaR"); 
-})();
+// ── FAQ Accordion ───────────────────────────────────────────
+var questions = document.querySelectorAll('.item h2');
 
-const signupBtn = document.getElementById("signupBtn");
-
-signupBtn.addEventListener("click", async () => {
-
-  const firstName = document.getElementById("signupFirstName").value;
-  const lastName = document.getElementById("signupLastName").value;
-  const email = document.getElementById("signupEmail").value;
-
-  const fullName = firstName + " " + lastName;
-  const time = new Date().toLocaleString();
-
-  try {
-
-    // 🟢 1. ADMIN EMAIL
-    await emailjs.send("service_r4a94f9", "template_vl5g1wu", {
-      user_name: fullName,
-      user_email: email,
-      time: time,
-      to_email: "tradeempire88@gmail.com"
-    });
-
-    console.log("Admin email sent");
-
-    // 🔵 2. USER EMAIL
-    await emailjs.send("service_r4a94f9", "template_wyjokbr", {
-      user_name: fullName,
-      to_email: email
-    });
-
-    console.log("User email sent");
-
-    alert("Signup successful! Emails sent ✅");
-
-  } catch (error) {
-    console.error("Email error:", error);
-    alert("Error sending email ❌");
-  }
-
+questions.forEach(function (question) {
+  question.addEventListener('click', function () {
+    var answer = this.nextElementSibling;
+    if (answer.style.display === 'block') {
+      answer.style.display = 'none';
+    } else {
+      answer.style.display = 'block';
+    }
+  });
 });
+
+// ── Hero Image Hover ─────────────────────────────────────────
+function changeImage() {
+  var img = document.getElementById('hoverimage');
+  if (img) img.src = './All images/trade image 2.png';
+}
+
+function beforeImg() {
+  var img = document.getElementById('hoverimage');
+  if (img) img.src = './All images/herosection img.png';
+}
+
+// ── Show/Hide Password (Login page only) ─────────────────────
+var pass     = document.getElementById("password");
+var checkbox = document.getElementById("showPass");
+
+if (pass && checkbox) {
+  checkbox.addEventListener("change", function () {
+    pass.type = this.checked ? "text" : "password";
+  });
+}
+
+// NOTE: Signup + EmailJS logic has been moved to Signup.html directly.
+// script.js ab sirf shared/index page ke liye hai.

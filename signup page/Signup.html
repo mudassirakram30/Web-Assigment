@@ -19,12 +19,10 @@
         <div class="form-row">
             <div class="form-group">
                 <label class="form-label">First Name</label>
-                <!-- ✅ ID added: signupFirstName -->
-                <input type="text" class="form-input" placeholder="First Name" id="signupFirstName" >
+                <input type="text" class="form-input" placeholder="First Name" id="signupFirstName">
             </div>
             <div class="form-group">
                 <label class="form-label">Last Name</label>
-                <!-- ✅ ID added: signupLastName -->
                 <input type="text" class="form-input" placeholder="Last Name" id="signupLastName">
             </div>
         </div>
@@ -32,19 +30,16 @@
         <div class="form-row">
             <div class="form-group">
                 <label class="form-label">Email</label>
-                <!-- ✅ ID added: signupEmail -->
                 <input type="email" class="form-input" placeholder="Your Email" id="signupEmail">
             </div>
             <div class="form-group">
                 <label class="form-label">Mobile Number</label>
-                <!-- ✅ ID added: signupPhone -->
                 <input type="tel" class="form-input" placeholder="Phone Number" id="signupPhone">
             </div>
         </div>
 
         <div class="form-group full">
             <label class="form-label">Password</label>
-            <!-- ✅ ID added: signupPass -->
             <input type="password" class="form-input" maxlength="8" placeholder="Create a Password" id="signupPass">
         </div>
 
@@ -54,17 +49,14 @@
         </div>
 
         <label class="agree-row">
-            <!-- ✅ ID already existed: agree -->
             <input type="checkbox" id="agree">
             <span>I agree with the <span class="red">NO REFUND POLICY</span></span>
         </label>
 
         <div class="form-group full">
-            <!-- ✅ ID added: agreeText -->
             <input type="text" class="form-input" placeholder='Type "I agree" to confirm' id="agreeText">
         </div>
 
-        <!-- ✅ ID added: signupBtn (onclick removed, handled in JS) -->
         <button class="auth-btn" id="signupBtn">Register →</button>
 
         <p class="auth-divider">OR</p>
@@ -76,11 +68,14 @@
 
 <p class="ccp" style="padding:16px 0">© 2025 Trade Empire. All Rights Reserved.</p>
 
-<!-- ✅ Firebase functions import (type="module" zaroori hai) -->
+<!-- EmailJS SDK pehle load ho -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 <script type="module">
     import { signupWithEmail } from "../firebase.js";
 
     document.getElementById('signupBtn').addEventListener('click', async () => {
+
         const firstName = document.getElementById('signupFirstName').value.trim();
         const lastName  = document.getElementById('signupLastName').value.trim();
         const email     = document.getElementById('signupEmail').value.trim();
@@ -89,30 +84,65 @@
         const agreed    = document.getElementById('agree').checked;
         const agreeText = document.getElementById('agreeText').value.trim().toLowerCase();
 
-        // ── Validation ──────────────────────────────────────────
+        // Validation
         if (!firstName || !lastName || !email || !phone || !password) {
             alert("Tamam fields bharna zaroori hain.");
             return;
         }
-
         if (!agreed || agreeText !== "i agree") {
             alert('Pehle "I agree" checkbox tick karo aur text field mein "I agree" likho.');
             return;
         }
-
         if (password.length < 6) {
             alert("Password kam az kam 6 characters ka hona chahiye.");
             return;
         }
-        // ────────────────────────────────────────────────────────
+
+        // FIX 1: EmailJS SDK check
+        if (!window.emailjs) {
+            alert("Email service load nahi hui. Page refresh karo.");
+            return;
+        }
+
+        // FIX 2: window.emailjs (module scope fix)
+        window.emailjs.init("aZAYbJc4HaaKa9kaR");
 
         const fullName = `${firstName} ${lastName}`;
-        await signupWithEmail(fullName, email, password);
+        const time     = new Date().toLocaleString();
+
+        // FIX 3: Firebase alag try/catch — fail ho to emails nahi bhejna
+        try {
+            await signupWithEmail(fullName, email, password);
+            console.log("Firebase signup successful");
+        } catch (firebaseError) {
+            console.error("Firebase Error:", firebaseError);
+            alert("Signup fail: " + (firebaseError.message || firebaseError));
+            return;
+        }
+
+        // Emails sirf Firebase success ke baad
+        try {
+            await window.emailjs.send("service_r4a94f9", "template_vl5g1wu", {
+                user_name:  fullName,
+                user_email: email,
+                time:       time,
+                to_email:   "tradeempire88@gmail.com"
+            });
+            console.log("Admin email sent");
+
+            await window.emailjs.send("service_r4a94f9", "template_wyjokbr", {
+                user_name: fullName,
+                to_email:  email
+            });
+            console.log("User email sent");
+
+        } catch (emailError) {
+            console.error("Email Error:", emailError);
+            // User register ho chuka hai — email error user ko mat dikhao
+        }
+
     });
 </script>
-<script src="../script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
 
 </body>
 </html>
