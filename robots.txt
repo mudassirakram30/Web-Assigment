@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tradeempire.vercel.app/sitemap.xml
+
+# Prevent indexing of search query URLs or any private paths if added later
+Disallow: /?*

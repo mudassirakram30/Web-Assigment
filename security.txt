@@ -1,0 +1,5 @@
+# Security Policy
+Contact: mailto:tradeempire88@gmail.com
+Encryption: https://tradeempire.vercel.app/pgp-key.txt
+Acknowledgements: https://tradeempire.vercel.app/security-report
+Policy: https://tradeempire.vercel.app/security.txt

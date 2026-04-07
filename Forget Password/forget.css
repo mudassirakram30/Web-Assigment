@@ -99,8 +99,7 @@ body { display: block; }
 .return-login:hover { color: var(--orange); }
 
 @media (max-width: 480px) {
-    .auth-card { padding: 28px 20px 24px; }
-}
+    .auth-card { padding: 28px 20px 24px; 
     height: 70px;
     display: inline;
 }
@@ -152,4 +151,5 @@ body { display: block; }
     text-decoration: none;
     font-weight: bold;
     font-size: 17px;
+}
 }
