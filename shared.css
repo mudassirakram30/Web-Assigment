@@ -135,6 +135,7 @@ img { max-width: 100%; display: block; }
     cursor: pointer;
     padding: 4px;
     flex-shrink: 0;
+    margin-left: auto;
 }
 
 .hamburger span {
