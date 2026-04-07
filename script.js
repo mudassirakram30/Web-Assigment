@@ -35,17 +35,46 @@ checkbox.addEventListener("change", function() {
 });
 //  Email Js Conceept
 
-const firstName = document.getElementById("signupFirstName").value;
-const lastName = document.getElementById("signupLastName").value;
-let name = firstName + " " + lastName;
-const signupBtn = document.querySelector(".signupBtn");
+(function(){
+  emailjs.init("YOUR_PUBLIC_KEY"); // 👈 yahan apni public key daalo
+})();
 
-signupBtn.addEventListener("click", () => {
+const signupBtn = document.getElementById("signupBtn");
 
-  let name = nameInput.value;
-  let email = emailInput.value;
+signupBtn.addEventListener("click", async () => {
 
-  sendEmails(name, email);
+  const firstName = document.getElementById("signupFirstName").value;
+  const lastName = document.getElementById("signupLastName").value;
+  const email = document.getElementById("signupEmail").value;
+
+  const fullName = firstName + " " + lastName;
+  const time = new Date().toLocaleString();
+
+  try {
+
+    // 🟢 1. ADMIN EMAIL
+    await emailjs.send("service_r4a94f9", "template_vl5g1wu", {
+      user_name: fullName,
+      user_email: email,
+      time: time,
+      to_email: "tradeempire88@gmail.com"
+    });
+
+    console.log("Admin email sent");
+
+    // 🔵 2. USER EMAIL
+    await emailjs.send("service_r4a94f9", "template_wyjokbr", {
+      user_name: fullName,
+      to_email: email
+    });
+
+    console.log("User email sent");
+
+    alert("Signup successful! Emails sent ✅");
+
+  } catch (error) {
+    console.error("Email error:", error);
+    alert("Error sending email ❌");
+  }
 
 });
-
